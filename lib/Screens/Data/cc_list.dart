@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'file:///C:/Users/yaroslav.shabatura/Downloads/flutter-cctracker/cctracker/lib/Screens/Data/CCData.dart';
+import 'file:///C:/Users/yaroslav.shabatura/Downloads/flutter-cctracker/cctracker/lib/Screens/Data/cc_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;

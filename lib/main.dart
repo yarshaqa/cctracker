@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Screens/Login/LoginScreen.dart';
+import 'Screens/Login/login_page.dart';
+import 'Screens/Login/login_screen.dart';
 
 void main() => runApp(CCTracker());
 
@@ -13,7 +14,7 @@ class CCTracker extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green
       ),
-      home: LoginScreen(),
+      home: LoginPage(),
     );
   }
 }
