@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'login_logic.dart';
 import 'package:cctracker/constants.dart';
-
+import 'package:cctracker/Screens/Data/cc_list.dart';
 class LoginPage extends StatelessWidget {
   bool _showPassword = false;
 
@@ -41,8 +41,20 @@ class LoginPage extends StatelessWidget {
                       child: Text("Log in"),
                       color: kPrimaryColor,
                       onPressed: () {
-                        l.login(
-                            myLoginController.text, myPasswordController.text);
+                        if(l.login(
+                            myLoginController.text, myPasswordController.text)){
+                          return Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => CCList()),
+                          );
+                        } else {
+                          showDialog(
+                              context: context,
+                              child: AlertDialog(
+                                // Retrieve the text the user has entered by using the
+                                // TextEditingController.
+                                  content: Text(myLoginController.text + " - wrong login or wrong password")));
+                        };
                       },
                     ),
                   ],
